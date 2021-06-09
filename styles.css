@@ -1,1 +1,100 @@
-/*Maak hier jouw CSS!*/
+.container {
+    background-color: white;
+    color: white;
+    margin: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 58px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+            "header"
+            "aside-1"
+            "header-2"
+            "aside-2"
+            "section"
+            "empty"
+            "footer";
+}
+
+#item-a {
+    background-color: salmon;
+    grid-area: header;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-b {
+    background-color: salmon;
+    grid-area: aside-1;
+    margin: 8px;
+    padding: 20px;
+}
+
+#item-c {
+    background-color: salmon;
+    grid-area: header-2;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-d {
+    background-color: salmon;
+    grid-area: aside-2;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#item-e {
+    background-color: salmon;
+    grid-area: section;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-f {
+    background-color: salmon;
+    grid-area: footer;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#emptyitem {
+    background-color: salmon;
+    grid-area: empty;
+    margin: 8px;
+}
+
+
+@media screen and (min-width: 576px) {
+    .container {
+        background-color: white;
+        margin: 8px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px auto 50px;
+        grid-template-areas:
+            "header header-2 header-2"
+            "aside-1 header-2 header-2"
+            "aside-1 section aside-2"
+            "footer footer footer";
+    }
+
+    #item-d {
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+    }
+}
+
